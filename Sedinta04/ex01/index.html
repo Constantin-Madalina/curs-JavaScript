@@ -5,9 +5,20 @@
     <title>Flow</title>
 </head>
 <body>
-
+<p id="message"></p>
     <script>
+    var value= window.prompt(),
+    paragraf =  document.getElementById('message');
 
+    console.log('Valoarea este:' + value);
+    if(value%2===0){
+      paragraf.innerHTML = 'Numarul este par.';
+
+    }
+    else {
+      paragraf.innerHTML = 'Numarul este impar.';
+
+    }
     </script>
 </body>
 </html>
