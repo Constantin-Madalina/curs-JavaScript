@@ -8,23 +8,46 @@
 
     <!-- insert script tag here -->
     <script>
-    var errorCode = serverResponse.errorCode;
-    if (errorCode === 0){
-      console.log('No error');
-    } else if(errorCode === 100){
-      console.log('Error 100 occured');
-    }else if(errorCode === 200){
-      console.log('Error 200 occured');
-    }else  if (errorCode === 300) {
-      console.log('Error 300 occured');
-    } else if (errorCode === 400) {
-      console.log('Error 400 occured');
-    } else if (errorCode === 500) {
-      console.log('Error 500 occured');
-    }else if (errorCode === 600) {
-      console.log('Error 600 occured');
-    } else {
-      console.log('something else');
+    var errorCode = 800;
+
+    // if (errorCode === 0){
+    //   console.log('No error');
+    // } else if(errorCode === 100){
+    //   console.log('Error 100 occured');
+    // }else if(errorCode === 200){
+    //   console.log('Error 200 occured');
+    // }else  if (errorCode === 300) {
+    //   console.log('Error 300 occured');
+    // } else if (errorCode === 400) {
+    //   console.log('Error 400 occured');
+    // } else if (errorCode === 500) {
+    //   console.log('Error 500 occured');
+    // }else if (errorCode === 600) {
+    //   console.log('Error 600 occured');
+    // } else {
+    //   console.log('something else');
+    // }
+
+    switch (errorCode) {
+      case 100:
+        console.log('Error code 100');
+        break;
+        case 200:
+          console.log('Error code 200');
+          break;
+          case 300:
+            console.log('Error code 300');
+            break;
+            case 400:
+              console.log('Error code 400');
+              break;
+              case 500:
+                console.log('Error code 500');
+                break;
+
+      default:
+      console.log('Something else');
+
     }
     </script>
 </body>

@@ -7,5 +7,67 @@
 <body>
 
     <!-- insert script tag here -->
+    <script>
+    var person = {
+      name: 'Dragos',
+      age: 32,
+      petOwner: false,
+      skills: [ 'html','javascript','css','java','c++','node','jquery'],
+    friends: [
+      {
+        name: 'Larry',
+        surname:'Larryson',
+        age:30},
+        {
+          name: 'Steven',
+          surname:'Stevenson',
+          age: 31
+        },
+        {
+          name:'Carol',
+          surname:'Carolson',
+          age: 29
+        }
+
+    ]
+    };
+    var i;
+    for(i=0; i<person.skills.length; i++){
+
+
+    console.log(person.skills[i]);
+
+    if( person.skills[i].startsWith('j') === true )
+    {
+    console.log(person.skills[i]);
+  }
+      }
+      var
+      friendstring='Prietenii mei se numesc ' ;
+
+      for(i=0; i<person.friends.length; i++)
+      {
+          friendstring+= person.friends[i].name + ' '+ person.friends[i].surname;
+
+          if (i < person.friends.length - 1){
+            friendstring+= ' , '
+          } else {
+            friendstring+= ' . '
+          }
+    }
+    console.log(friendstring);
+var S=0;
+for(i=0; i<person.friends.length; i++){
+  S+= person.friends[i].age;
+
+}
+console.log(S);
+var d;
+for(i=0; i<person.friends.length; i++){
+  d=person.age-person.friends[i].age;
+  console.log(d);
+}
+    </script>
 </body>
+
 </html>
