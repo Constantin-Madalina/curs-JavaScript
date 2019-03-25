@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>More For</title>
 </head>
+
 <body>
 
     <!-- insert script tag here -->
+    <script>
+        var friends = [{
+            name: 'Dragos',
+            surname: 'Iordache',
+            friends: {}
+        }, {
+            name: 'Larry',
+            surname: 'Laryson',
+            friends: {}
+        }, {
+            name: 'Steven',
+            surname: 'Stevenson',
+            friends: {}
+        }, {
+            name: 'Carol',
+            surname: 'Carolson',
+            friends: {}
+        }, {
+            name: 'Andra',
+            surname: 'Andrason',
+            friends: {}
+        }
+        ];
+        var i;
+        for (i = 0; i < friends.length; i++) {
+            console.log(friends[i].surname);
+
+        }
+        for (i = 0; i < friends.length; i++) {
+
+            console.log(friends[i].name +' '+ friends[i].surname);
+            if (friends[i].name === 'Steven') {
+                break;
+            }
+        }
+        var totaltext=0;
+        for(i=0; i<friends.length; i++)
+        {
+            totaltext= friends[i].name.length+friends[i].surname.length;
+            if(totaltext>=13){
+                console.log(friends[i].name +' ' + friends[i].surname);
+                
+
+            }
+
+        }
+
+    </script>
 </body>
+
 </html>
