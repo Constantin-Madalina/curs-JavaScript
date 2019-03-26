@@ -49,12 +49,12 @@
       {
           friendstring+= person.friends[i].name + ' '+ person.friends[i].surname;
 
-          if (i < person.friends.length - 1){
+          if (i <= person.friends.length - 1){
             friendstring+= ' , '
-          } else {
-            friendstring+= ' . '
-          }
-    }
+          } 
+        else{
+          friendstring+= ' . '
+        }    }
     console.log(friendstring);
 var S=0;
 for(i=0; i<person.friends.length; i++){
