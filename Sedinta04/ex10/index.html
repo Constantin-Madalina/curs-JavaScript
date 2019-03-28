@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Foreach</title>
 </head>
+
 <body>
 
     <!-- insert script tag here -->
+    <script>
+        var person = {
+            name: 'Dragos',
+            surname: 'Iordache',
+            age: 32,
+            petOwner: false,
+            skills: ['html', 'javascript', 'css', 'java', 'c++', 'node', 'jquery'],
+            friends: [{
+                name: 'Larry',
+                surname: 'Larryson',
+                age: 30,
+            },
+            {
+                name: 'Steven',
+                surname: 'Stevenson',
+                age: 32,
+            },
+            {
+                name: 'Carol',
+                surname: 'Carolson',
+                age: 29,
+            }]
+        };
+
+        // //  ex.1
+        // person.skills.forEach(Element=>{
+        // console.log(Element);
+
+        // }) ;
+
+        //  ex.2
+        person.skills.forEach(Element => {
+            if (Element.startsWith('j')) {
+                Element++;
+            } else {
+                console.log(Element);
+            }
+        });
+
+//    ex 3
+var stringfriend='Prietenii mei se numesc '
+person.friends.forEach(Element => {
+    stringfriend+= Element.name+' '+ Element.surname+', ';
+});
+console.log(stringfriend);
+//   ex 4
+var s=0;
+person.friends.forEach(element => {
+    s+= element.age;
+});
+console.log(s);
+
+//   ex 5
+var s=0;
+person.friends.forEach(Element => {
+    var d=0;
+    d=2019-Element.age;
+    s+=d;
+});
+console.log(s);
+
+// ex 6
+var d=0;
+person.friends.forEach(element => {
+    d= person.age- element.age;
+    console.log(d);
+});
+// ex 7
+var d=0;
+person.friends.forEach(element => {
+    d= person.age- element.age;
+    console.log('Intre '+ person.name +' si '+element.name+' este o diferenta de '+d+' ani. ');
+});
+    </script>
 </body>
+
 </html>
