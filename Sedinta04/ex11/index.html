@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Object.keys</title>
 </head>
+
 <body>
 
     <!-- insert script tag here -->
+    <script>
+        var person = {
+            name: 'Dragos',
+            surname: 'Iordache',
+            age: 32,
+            petOwner: false,
+            skills: {
+                html: true,
+                javascript: true,
+                css: true
+            },
+            friends: [{
+                name: 'Larry',
+                surname: 'Larryson',
+                age: 30,
+            },
+            {
+                name: 'Steven',
+                surname: 'Stevenson',
+                age: 32,
+            },
+            {
+                name: 'Carol',
+                surname: 'Carolson',
+                age: 29,
+            }
+            ]
+        };
+        console.log(Object.keys(person));
+        console.log(Object.keys(person.skills));
+//         var i=0,
+//         name='';
+//         for(i=0; i<person.friends;i++) {
+// name=person.friends.name+' '+person.friends.surname;
+// console.log('name');
+
+        // }
+        
+        // Nu imi apare numele:(
+// console.log(Object.defineProperty (person.friends[i], 'fullName',{
+//            get : function(){
+//                 return this.name+' '+ this.surname;
+//             }
+//         }));
+
+Object.entires(person.friends).forEach(([value]) => console.log('${value}'));
+
+
+    </script>
 </body>
+
 </html>

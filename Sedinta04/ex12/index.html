@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Variable scope</title>
 </head>
+
 <body>
 
     <!-- insert script tag here -->
+    <script>
+        var globalVariable = 'Ma numesc in contextul global ',
+        noVariable='';
+
+        function contextTest() {
+            var localVariable = 'Ma aflu in contextul local ',
+            globalVariable = 'Nu ma aflu in contextul global ';
+            console.log(globalVariable);
+            console.log(localVariable);
+            console.log(noVariable);
+
+
+        }
+contextTest();
+
+    </script>
 </body>
+
 </html>
