@@ -5,6 +5,17 @@
     <title>Object Methods</title>
 </head>
 <body>
-
+<script>
+var object ={
+  elev01:'Larry Larryson',
+  elev02:'Steve',
+  elev03:'Carol',
+  elev04:'Madalina'
+}, i =1,
+    keyNumber=Object.keys(object).length;
+for(; i<=4;i++){
+  console.log(object['elev0'+i],i);
+}
+</script>
 </body>
 </html>
