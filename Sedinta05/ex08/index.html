@@ -18,8 +18,12 @@ removebutton= document.getElementById('remove');
 // });
 function clickHandler(){
   alert('Ai apasat butonul!');
+};
+function secondclickHandler(){
+  alert('Ai apasat butonul!');
 }
 button.addEventListener('click', clickHandler);
+button.addEventListener('click', secondclickHandler);
 removebutton.addEventListener('click', function(){
   button.removeEventListener('click', clickHandler);
 });
