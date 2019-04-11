@@ -7,18 +7,22 @@
 <body>
 
   <button id="clicker">Acces</button>
+  <button id="remove">Elimina Evenimentul</button>
 
   <script>
 
-var button= document.getElementById('clicker');
-button.addEventListener('click', function(){
-  alert('Ai apasat butonul!');
-});
+var button= document.getElementById('clicker'),
+removebutton= document.getElementById('remove');
+// button.addEventListener('click', function(){
+//   alert('Ai apasat butonul!');
+// });
 function clickHandler(){
   alert('Ai apasat butonul!');
 }
-button.addEventListener('click', clickHandler());
-
+button.addEventListener('click', clickHandler);
+removebutton.addEventListener('click', function(){
+  button.removeEventListener('click', clickHandler);
+});
   </script>
 
 
