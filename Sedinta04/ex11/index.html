@@ -20,64 +20,71 @@
                 javascript: true,
                 css: true
             },
-            friends: [{
-                name: 'Larry',
-                surname: 'Larryson',
-                age: 30,
-            },
-            {
-                name: 'Steven',
-                surname: 'Stevenson',
-                age: 32,
-            },
-            {
-                name: 'Carol',
-                surname: 'Carolson',
-                age: 29,
+            friends: {
+                larry: {
+                    name: 'Larry',
+                    surname: 'Larryson',
+                    age: 30
+                },
+                steven: {
+                    name: 'Steven',
+                    surname: 'Stevenson',
+                    age: 32
+                },
+                carol: {
+                    name: 'Carol',
+                    surname: 'Carolson',
+                    age: 29
+                }
             }
-            ]
         };
         console.log(Object.keys(person));
         console.log(Object.keys(person.skills));
         console.log(Object.values(person.skills));
 
-        // ex02
+        console.log('-------------------Ex02-----------------');
+// var i=0;
+// for(i=0; i<Object.length(person.friends); i++){
+//     console.log(Object.values(person.friends[i].name+ ' '+person.friends[i].surname));
 
-        var i=0,
-        name='';
-        for(i=0; i<person.friends.length;i++) {
-name= person.friends[i].name+' '+person.friends[i].surname;
-console.log(name);
-
+// }
+var i=0, name=' ';
+        for(i=0; i<person.friends.length;i++){
+            name+= Object.values(person.friends[i].name)+' '+ Object.values(person.friends[i].surname);
+        console.log(name);
+        
         }
+        console.log(Object.values(person.friends.larry));
+       
 
-    //    ex03 
 
-        var i=0;
-for(i=0; i<person.friends.length;i++){
-console.log(Object.defineProperty (person.friends[i], 'fullName',{
-           get : function(){
-                return this.name+' '+ this.surname;
+        console.log('-------------------Ex03-----------------');
+
+        var i = 0;
+        for (i = 0; i < person.friends.length; i++) {
+            console.log(Object.defineProperty(person.friends[i], 'fullName', {
+                get: function () {
+                    return this.name + ' ' + this.surname;
+                }
+
+            }));
+        }
+        //  de ce imi apare si varsta? 
+
+        console.log('-------------------Ex04-----------------');
+
+        var i = 0;
+        for (i = 0; i < person.friends.length; i++) {
+            if (person.age === person.friends[i].age) {
+                console.log(Object.values(person.friends[i].name) + ' este de aceeasi varsta cu  ' + Object.values(person.name));
+
             }
-            
- } ));
-}
-//  de ce imi apare si varsta? 
-
-    //   ex04
-
-     var i=0;
-for(i=0; i<person.friends.length;i++){
-if (person.age===person.friends[i].age) {
-    console.log(Object.values(person.friends[i].name) + ' este de aceeasi varsta cu  '+ Object.values(person.name));
-      
-}
-if (person.age>person.friends[i].age) {
-    console.log(person.friends[i].name + ' este mai mic decat '+ person.name);
-} else {
-    console.log(person.friends[i].name + ' este mai mare decat '+ person.name);
-}
-}
+            if (person.age > person.friends[i].age) {
+                console.log(person.friends[i].name + ' este mai mic decat ' + person.name);
+            } else {
+                console.log(person.friends[i].name + ' este mai mare decat ' + person.name);
+            }
+        }
 
 // De ce apare virgula dupa fiecare litera???
 
