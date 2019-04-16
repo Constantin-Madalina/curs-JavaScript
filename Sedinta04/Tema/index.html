@@ -34,36 +34,39 @@
 
             ]
         };
+console.log('--------------ex 01-------------');
         var dif = 0;
         for (i = 0; i < person.friends.length; i++) {
             for (j = 0; j < person.friends.length; j++) {
                 if (i === j) {
-                    j++;
+                    continue;
                 }
                dif=Math.abs(person.friends[i].age-person.friends[j].age);
-                
+
                 console.log('Intre ' + person.friends[i].name + ' si ' + person.friends[j].name + ' este o diferenta de ' + dif + ' ani.');
 
             }
         }
-
+console.log('--------------ex 02-------------');
         var dif = 0;
+
         for (i = 0; i < person.friends.length; i++) {
             for (j = 0; j < person.friends.length; j++) {
                 if (i === j) {
-                    j++;
+                    continue;
                 }
-                var a=person.friends[i].age,
-                b=person.friends[j].age
+                var age1=person.friends[i].age,
+                age2=person.friends[j].age
+
                 function difference(a, b) {
                     return  Math.abs(a - b);
                 }
-                
-                console.log('Intre ' + person.friends[i].name + ' si ' + person.friends[j].name + ' este o diferenta de ' + difference() + ' ani.');
+
+                console.log('Intre ' + person.friends[i].name + ' si ' + person.friends[j].name + ' este o diferenta de ' + difference(age1, age2) + ' ani.');
 
             }
         }
-        // imi apare eroare.de ce? 
+        // imi apare eroare.de ce?
 
 
     </script>
