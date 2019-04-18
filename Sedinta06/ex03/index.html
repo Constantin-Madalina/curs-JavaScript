@@ -3,10 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <title>User Agent</title>
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script>
+    document.addEventListener('DOMContentLoaded',function(){
+      var button = document.querySelector('button');
+
+      button.addEventListener('click', function(){
+        alert('Am apasat butonul.')
+      });
+    });
+
+    </script>
 </head>
 <body>
-  
+
   <button>Click Me</button>
+
 </body>
 </html>
